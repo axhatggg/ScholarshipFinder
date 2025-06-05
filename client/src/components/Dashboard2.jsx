@@ -86,7 +86,7 @@ export default function Dashboard2() {
         try {
           const uid = auth.currentUser?.uid;
           const { data } = await axios.get(
-            `http://localhost:5000/api/users/${uid}`
+            `https://scholarshipfinder-jyel.onrender.com/api/users/${uid}`
           );
           // Expect backend returns { name, email, cgpa, location, memberSince, avatar }
           console.log(data);
@@ -119,7 +119,7 @@ export default function Dashboard2() {
   useEffect(() => {
   const fetchScholarships = async () => {
     try {
-      const { data } = await axios.get("http://localhost:5000/api/scholarships");
+      const { data } = await axios.get("https://scholarshipfinder-jyel.onrender.com/api/scholarships");
       setScholarships(data);
     } catch (err) {
       console.error("Error fetching scholarships:", err);
@@ -661,7 +661,7 @@ function EditProfileModal({ initialData, onClose, onSave }) {
               try {
                 // Send updated data to backend
                 const response = await axios.put(
-                  `http://localhost:5000/api/users/${auth.currentUser?.uid}`, 
+                  `https://scholarshipfinder-jyel.onrender.com/api/users/${auth.currentUser?.uid}`, 
                   updatedData
                 );
 

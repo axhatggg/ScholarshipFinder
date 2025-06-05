@@ -148,7 +148,7 @@ export default function Dashboard2() {
   const meetsCgpa =
     filterCgpa === "" ? true : parseFloat(filterCgpa) >= sch.cgpaRequirement;
 
-  const locationLower = filterLocation.toLowerCase();
+  const locationLower = (filterLocation || "").toLowerCase();
 
   const meetsLocation =
     filterLocation === ""
@@ -156,10 +156,7 @@ export default function Dashboard2() {
       : (sch.location && sch.location.toLowerCase() === locationLower) ||
         (sch.title && sch.title.toLowerCase().includes(locationLower));
 
-  const meetsCategory =
-    filterCourse === "" ? true : sch.scholarshipCategory === filterCourse;
-
-    const courseLower = filterCourse.toLowerCase();
+  const courseLower = (filterCourse || "").toLowerCase();
   const eligibilityText = sch.eligibility?.toLowerCase() || "";
 
   const courseKeywords = {
@@ -173,18 +170,18 @@ export default function Dashboard2() {
     professional: ["professional"],
   };
 
-  console.log(filterCourse)
   const meetsCourse =
     filterCourse === "" ||
     eligibilityText.includes(courseLower) ||
-    (courseKeywords[filterCourse] || []).some((keyword) =>
+    (courseKeywords[courseLower] || []).some((keyword) =>
       eligibilityText.includes(keyword)
     );
-    if(meetsCourse)
-    console.log(eligibilityText)
+
+  if (meetsCourse) console.log(eligibilityText);
 
   return meetsCgpa && meetsLocation && meetsCourse;
 });
+
 
   const getDaysLeft = (deadline) => {
   if (!deadline) return Infinity;

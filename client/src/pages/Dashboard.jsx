@@ -10,7 +10,7 @@ const Dashboard = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    axios.get(`http://localhost:5000/api/users/${uid}`).then(res => {
+    axios.get(`https://scholarshipfinder-jyel.onrender.com/api/users/${uid}`).then(res => {
       setFormData(res.data);
     });
   }, [uid]);
@@ -23,7 +23,7 @@ const Dashboard = () => {
 
   const handleSubmit = () => {
     console.log(uid)
-    axios.put(`http://localhost:5000/api/users/${uid}`, formData);
+    axios.put(`https://scholarshipfinder-jyel.onrender.com/api/users/${uid}`, formData);
   };
 
   return (

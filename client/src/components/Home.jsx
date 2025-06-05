@@ -42,7 +42,7 @@ export default function HomePage() {
 
         // Post user data to backend (login or registration)
         try {
-          await axios.post("http://localhost:5000/api/users/login", {
+          await axios.post("https://scholarshipfinder-jyel.onrender.com/api/users/login", {
             uid: user.uid,
             email: user.email,
             name: user.displayName,

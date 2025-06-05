@@ -1,5 +1,6 @@
 import { signInWithPopup } from 'firebase/auth';
-import { auth, provider } from '../firebase';
+import { auth, provider } from "../firebase/firebase";
+
 import axios from 'axios';
 
 const AuthButton = () => {

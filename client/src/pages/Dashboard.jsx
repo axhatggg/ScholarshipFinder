@@ -5,7 +5,7 @@ import { auth } from "../firebase/firebase";
 import { useNavigate } from "react-router-dom";
 
 const Dashboard = () => {
-     const uid = auth.currentUser?.uid;
+    const uid = auth.currentUser?.uid;
   const [formData, setFormData] = useState({});
   const navigate = useNavigate();
 

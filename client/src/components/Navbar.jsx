@@ -19,12 +19,12 @@ export default function NavBar() {
           >
             Home
           </Link>
-          <a
-            href="#features"
+         <Link
+            to="/features"
             className="text-indigo-600 hover:text-indigo-800 transition"
           >
             Features
-          </a>
+          </Link>
           <a
             href="#contact"
             className="text-indigo-600 hover:text-indigo-800 transition"

@@ -1,0 +1,148 @@
+/* =======================
+   GLOBAL & SMOOTH SCROLL
+======================= */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f4f4f4;
+  color: #333;
+}
+
+/* =======================
+   NAVBAR
+======================= */
+.navbar {
+  background: #ffffff;
+  padding: 12px 24px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.nav-link {
+  margin-right: 24px;
+  text-decoration: none;
+  color: #2c3e50;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: color 0.25s ease;
+}
+
+.nav-link:hover {
+  color: #1063ff;
+}
+
+/* =======================
+   HERO / PAGE HEADER
+======================= */
+.features-hero {
+  background: #1063ff;
+  color: #ffffff;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.features-hero h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  line-height: 1.2;
+}
+
+.features-hero p {
+  margin-top: 12px;
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0.9;
+}
+
+/* =======================
+   FEATURES GRID
+======================= */
+.features-section {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.feature-card {
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 24px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.feature-icon {
+  font-size: 2.5rem;
+  margin-bottom: 16px;
+  color: #1063ff;
+}
+
+.feature-title {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 8px;
+}
+
+.feature-desc {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* =======================
+   OPTIONAL FOOTER STYLES
+======================= */
+/*
+#footer {
+  background: linear-gradient(135deg, #2c3e50 0%, #4ca1af 100%);
+  color: #f4f4f4;
+  padding: 40px 20px 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 14px 20px;
+  margin-top: 40px;
+  font-size: 0.9rem;
+  color: #cfd8dc;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+*/
+
+/* =======================
+   RESPONSIVE ADJUSTMENTS
+======================= */
+@media (max-width: 768px) {
+  .features-hero h1 {
+    font-size: 2rem;
+  }
+
+  .features-hero p {
+    font-size: 1rem;
+  }
+}

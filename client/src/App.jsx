@@ -5,6 +5,7 @@ import Features from "./components/Features";
 import ProtectedRoute from "./components/ProtectedRoute";
 import HomePage from "./components/Home";
 import Dashboard2 from "./components/Dashboard2";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           }
         /> */}
       </Routes>
+      <Footer />
     </BrowserRouter>
   );
 }
